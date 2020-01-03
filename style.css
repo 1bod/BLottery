@@ -1,0 +1,88 @@
+body {
+    font-family: 'Rubik',
+        sans-serif;
+
+    font-family: 'Montserrat',
+        sans-serif;
+    background: #232526;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: aliceblue;
+    table-layout: fixed;
+
+}
+
+td,
+tr,
+table {
+    display: block;
+    padding: 1% 1% 1% 1%;
+    table-layout: fixed;
+}
+
+td {
+    width: 9%;
+    height: 9%;
+    font-size: 1vw;
+}
+
+table {
+    width: 98%;
+    height: 98%;
+
+}
+
+
+
+
+
+/* Force table to not be like tables anymore */
+table,
+thead,
+tbody,
+th,
+td,
+tr {
+    display: block;
+}
+
+/* Hide table headers (but not display: none;, for accessibility) */
+thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+tr {
+    border: 1px solid #ccc;
+}
+
+td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: none;
+    position: relative;
+    padding-left: 50%;
+}
+
+td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+}
+
+.checked {
+    background-color: lawngreen;
+}
+
+.checked:hover {
+    background-color: green;
+}
