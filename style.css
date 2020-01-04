@@ -57,7 +57,7 @@ thead tr {
 }
 
 tr {
-    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0);
 }
 
 td {
@@ -80,9 +80,47 @@ td:before {
 }
 
 .checked {
-    background-color: lawngreen;
+    background-color: #28a745;
 }
 
 .checked:hover {
     background-color: green;
+}
+
+.hist,
+.controls {
+    position: absolute;
+    z-index: 10;
+    text-align: right;
+    align-self: right;
+    position: fixed;
+    overflow: auto;
+    right: 0.7%;
+    top: 0;
+    width: 20%;
+    height: 20%;
+}
+
+* {
+    scrollbar-color: #2a2c2e #232526;
+}
+
+.PrC {
+    align-self: center;
+}
+
+.controls {
+    bottom: 1cm;
+    z-index: 20;
+}
+
+.lastPressed {
+    font-size: 5vw;
+    background-color: rgba(0, 243, 32, 0.5);
+    padding: 10%;
+    border-radius: 20%;
+}
+
+.LP {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
