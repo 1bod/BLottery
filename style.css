@@ -124,3 +124,8 @@ td:before {
 .LP {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.copyright {
+    font-size: 0.5vm;
+    color: rgba(158, 158, 158, 0.9);
+}
