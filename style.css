@@ -15,25 +15,6 @@ body {
 
 }
 
-td,
-tr,
-table {
-    display: block;
-    padding: 1% 1% 1% 1%;
-    table-layout: fixed;
-}
-
-td {
-    width: 9%;
-    height: 9%;
-    font-size: 1vw;
-}
-
-table {
-    width: 98%;
-    height: 98%;
-
-}
 
 
 
@@ -65,7 +46,7 @@ td {
     border: none;
     border-bottom: none;
     position: relative;
-    padding-left: 50%;
+    padding-left: 49%;
 }
 
 td:before {
@@ -87,18 +68,26 @@ td:before {
     background-color: green;
 }
 
-.hist,
-.controls {
-    position: absolute;
+
+.lastPressed {
+    font-size: 5vw;
+    background-color: rgba(0, 243, 32, 0.6);
+    padding: 10%;
+    border-radius: 20%;
+}
+
+.hist {
+    
     z-index: 10;
-    text-align: right;
-    align-self: right;
+    text-align: center;
+    float: right;
     position: fixed;
     overflow: auto;
-    right: 0.7%;
-    top: 0;
-    width: 20%;
-    height: 20%;
+    right: 0.5%;
+    top: 300px;
+    width: 10%;
+    height: 40%;
+
 }
 
 * {
@@ -109,23 +98,32 @@ td:before {
     align-self: center;
 }
 
-.controls {
-    bottom: 1cm;
-    z-index: 20;
-}
-
-.lastPressed {
-    font-size: 5vw;
-    background-color: rgba(0, 243, 32, 0.5);
-    padding: 10%;
-    border-radius: 20%;
-}
-
 .LP {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .copyright {
-    font-size: 0.5vm;
-    color: rgba(158, 158, 158, 0.9);
+    font-size: 0.2vm;
+    color: rgba(255, 255, 255, 0.8);
+    left: 50px;
+}
+
+td,
+tr,
+table {
+    display: block;
+    padding: 1% 1% 1% 1%;
+    table-layout: fixed;
+}
+
+td {
+    width: 9%;
+    height: 9%;
+    font-size: 0.9vw;
+}
+
+table {
+    width: 95%;
+    height: 82%;
+    padding-bottom: 0%;
 }
