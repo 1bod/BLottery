@@ -92,6 +92,15 @@ td:before {
 
 * {
     scrollbar-color: #2a2c2e #232526;
+    -webkit-scrollbar-color: #2a2c2e #232526;
+}
+
+::-webkit-scrollbar-track {
+    background: #232526;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2a2c2e;
 }
 
 .PrC {
@@ -103,9 +112,9 @@ td:before {
 }
 
 .copyright {
-    font-size: 0.2vm;
+    font-size: 1.2vw;
     color: rgba(255, 255, 255, 0.8);
-    left: 50px;
+    left: 5%;
 }
 
 td,
@@ -126,4 +135,19 @@ table {
     width: 95%;
     height: 82%;
     padding-bottom: 0%;
+}
+
+.copyright a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.controls button {
+    width: 1vw;
+    height: 1vw;
+}
+
+.controls button img {
+    width: 1vw;
+    height: 1vw;
 }
