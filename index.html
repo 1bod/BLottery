@@ -15,6 +15,11 @@
 
 <body>
     <div class="PrC">
+        <span class="controls"><button onclick="openFullscreen()" class="btn"><img src="media/expand.svg"
+                    alt="Fullscreen"></button><button onclick="closeFullscreen()" class="btn"><img src="media/focus.svg"
+                    alt="Exit Fullscreen"></button><button onclick="document.location.reload(true)" class="btn"><img
+                    src="media/refresh.svg" alt="Reload"></button></span>
+
         <table>
             <tr>
                 <td class="btn btn-secondary btn-lg disabled"></td>
@@ -137,10 +142,17 @@
                 <td class="btn btn-secondary btn-lg disabled"></td>
             </tr>
         </table>
-        <div class="hist"><div class="lastPressed">0</div>
+        <div class="hist">
+            <div class="lastPressed">0</div>
+
+        </div>
+        <div class="copyright">Copyright &#169; 2020 Maxence Raynal - Licensed under MIT <div>Icons made by <a
+                    href="https://www.flaticon.com/authors/kiranshastry" title="Kiranshastry">Kiranshastry</a> from <a
+                    href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
         </div>
     </div>
+
 </body>
-<span class="copyright">Copyright &#169; 2020 Maxence Raynal - Licensed under MIT</span>
+
 
 </html>
