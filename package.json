@@ -10,7 +10,7 @@
     "make": "electron-forge make"
   },
   "author": {
-    "name":"Maxence Raynal",
+    "name": "Maxence Raynal",
     "email": "mraynal2008@gmail.com"
   },
   "license": "MIT",
@@ -32,13 +32,15 @@
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "bod_lottery"
+            "name": "Bod-lottery",
+            "authors": "Maxence Raynal"
           }
         },
         {
           "name": "@electron-forge/maker-zip",
           "platforms": [
-            "darwin"
+            "darwin",
+            "win32"
           ]
         },
         {
