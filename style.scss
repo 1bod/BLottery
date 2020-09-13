@@ -1,0 +1,202 @@
+@font-face {
+  font-family: "HurmeGeometricSans4W00-Bold";
+  src: url("Hurme Geometric Sans 1 W03 Bold.ttf") format("truetype");
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    font-family: 'HurmeGeometricSans4W00-Bold',
+        'Roboto',
+        Arial,
+        sans-serif;
+
+    grid: repeat(10, 1fr) / repeat(10, 1fr);
+    color: #fff;
+    background-color: black;
+    width: 100vw;
+}
+
+.button {
+    &:hover {
+        cursor: pointer;
+    }
+
+    width: 90%;
+    height: 80%;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    vertical-align: middle;
+    border-radius: 1vh;
+    font-size: 4vh;
+
+    &.toggled {
+        background-color: #fff;
+        color: #000;
+    }
+}
+
+.diagonal {
+
+    display: grid;
+    place-items: center;
+    color: #fff;
+    user-select: none;
+    &:before {
+        content: "";
+        position: fixed;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        top: 40vh;
+        height: 30vh;
+        background: linear-gradient(344deg, rgba(255, 255, 0, 1) 8%, rgb(255, 196, 0) 100%);
+        transform: skewY(-6deg);
+        width: 100vw;
+        animation: 1s ease 0s infinite alternate gameWonFront;
+        animation-play-state: inherit
+    }
+
+    .content {
+        overflow: hidden;
+        max-width: 50em;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 10rem;
+        padding-top: 40vh;
+        color: inherit;
+        animation: 1s cubic-bezier(.37, .35, .05, .91) 0s infinite alternate gameWonTextLong;
+
+        &.short {
+            font-size: 20vw;
+            padding-top: 28vh;
+            animation: 1s cubic-bezier(.37, .35, .05, .91) 0s infinite alternate gameWonText;
+        }
+
+        &::first-letter {
+            text-transform: capitalize;
+        }
+
+        animation-play-state: inherit;
+    }
+}
+
+.animations {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    animation: 1s ease-in 0s infinite alternate gameWonBack;
+
+}
+
+@keyframes gameWonFront {
+    0% {
+        height: 0vh;
+        top: 55vh;
+    }
+
+    70% {
+        height: 3vh;
+        top: 53vh;
+    }
+
+    100% {
+        height: 30vh;
+        top: 40vh;
+    }
+}
+
+@keyframes gameWonBack {
+    0% {
+        background-color: transparent;
+    }
+
+    100% {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+}
+
+@keyframes gameWonText {
+    0% {
+        padding-top: 40vh;
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        padding-top: 28vh;
+        opacity: 1;
+    }
+}
+
+@keyframes gameWonTextLong {
+    0% {
+        padding-top: 50vh;
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        padding-top: 40vh;
+        opacity: 1;
+    }
+}
+
+.stop-anim {
+    animation-play-state: paused !important;
+}
+
+.off {
+    display: none !important;
+}
+
+.center {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    font-family: 'HurmeGeometricSans4W00-Bold',
+        'Roboto',
+        Arial,
+        sans-serif;
+    font-size: 2.2rem;
+
+}
+
+.control {
+    z-index: 10000;
+    position: fixed;
+    opacity: 0.1;
+    transition: all 0.3s;
+
+    &:hover {
+        opacity: 0.9;
+    }
+
+    button {
+        background-color: #222;
+        border: none;
+        color: #fff;
+    }
+}
+
+.light {
+    .container {
+        background-color: #fff;
+        color: #000;
+
+    }
+    .toggled{
+        background: #000;
+        color: #fff;
+    }
+}

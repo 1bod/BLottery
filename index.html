@@ -1,161 +1,99 @@
-<!doctype html>
-<html lang="fr">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Rubik&display=swap" rel="stylesheet">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Loto Rugby Argentat</title>
-    <link rel="stylesheet" href="bootstrap.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="jquery-3.4.1.min.js"></script>
-    <script src="script.js"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="config.js"></script>
+    <title>Bod's Lottery - Infos</title>
 </head>
 
 <body>
-    <div class="PrC">
-        <span class="controls">
-            <button onclick="openFullscreen()" class="btn" title="Fullscreen"><img src="media/expand.svg"
-                    alt="Fullscreen"></button>
-            <button onclick="closeFullscreen()" class="btn"><img src="media/focus.svg"
-                    alt="Exit Fullscreen" title="Exit Fullscreen"></button>
-            <button onclick="document.location.reload(true)" class="btn"><img
-                    src="media/refresh.svg" alt="Reload" title="Reload"></button></span>
 
-        <table>
-            <tr>
-                <td class="btn btn-secondary btn-lg disabled"></td>
-                <td class="btn btn-primary btn-lg">1</td>
-                <td class="btn btn-primary btn-lg">2</td>
-                <td class="btn btn-primary btn-lg">3</td>
-                <td class="btn btn-primary btn-lg">4</td>
-                <td class="btn btn-primary btn-lg">5</td>
-                <td class="btn btn-primary btn-lg">6</td>
-                <td class="btn btn-primary btn-lg">7</td>
-                <td class="btn btn-primary btn-lg">8</td>
-                <td class="btn btn-primary btn-lg">9</td>
-            </tr>
-            <tr>
-                <td class="btn btn-primary btn-lg">10</td>
-                <td class="btn btn-primary btn-lg">11</td>
-                <td class="btn btn-primary btn-lg">12</td>
-                <td class="btn btn-primary btn-lg">13</td>
-                <td class="btn btn-primary btn-lg">14</td>
-                <td class="btn btn-primary btn-lg">15</td>
-                <td class="btn btn-primary btn-lg">16</td>
-                <td class="btn btn-primary btn-lg">17</td>
-                <td class="btn btn-primary btn-lg">18</td>
-                <td class="btn btn-primary btn-lg">19</td>
-            </tr>
-            <tr>
-                <td class="btn btn-primary btn-lg">20</td>
-                <td class="btn btn-primary btn-lg">21</td>
-                <td class="btn btn-primary btn-lg">22</td>
-                <td class="btn btn-primary btn-lg">23</td>
-                <td class="btn btn-primary btn-lg">24</td>
-                <td class="btn btn-primary btn-lg">25</td>
-                <td class="btn btn-primary btn-lg">26</td>
-                <td class="btn btn-primary btn-lg">27</td>
-                <td class="btn btn-primary btn-lg">28</td>
-                <td class="btn btn-primary btn-lg">29</td>
-            </tr>
-            <tr>
-                <td class="btn btn-primary btn-lg">30</td>
-                <td class="btn btn-primary btn-lg">31</td>
-                <td class="btn btn-primary btn-lg">32</td>
-                <td class="btn btn-primary btn-lg">33</td>
-                <td class="btn btn-primary btn-lg">34</td>
-                <td class="btn btn-primary btn-lg">35</td>
-                <td class="btn btn-primary btn-lg">36</td>
-                <td class="btn btn-primary btn-lg">37</td>
-                <td class="btn btn-primary btn-lg">38</td>
-                <td class="btn btn-primary btn-lg">39</td>
-            </tr>
-            <tr>
-                <td class="btn btn-primary btn-lg">40</td>
-                <td class="btn btn-primary btn-lg">41</td>
-                <td class="btn btn-primary btn-lg">42</td>
-                <td class="btn btn-primary btn-lg">43</td>
-                <td class="btn btn-primary btn-lg">44</td>
-                <td class="btn btn-primary btn-lg">45</td>
-                <td class="btn btn-primary btn-lg">46</td>
-                <td class="btn btn-primary btn-lg">47</td>
-                <td class="btn btn-primary btn-lg">48</td>
-                <td class="btn btn-primary btn-lg">49</td>
-            </tr>
-            <tr>
-                <td class="btn btn-primary btn-lg">50</td>
-                <td class="btn btn-primary btn-lg">51</td>
-                <td class="btn btn-primary btn-lg">52</td>
-                <td class="btn btn-primary btn-lg">53</td>
-                <td class="btn btn-primary btn-lg">54</td>
-                <td class="btn btn-primary btn-lg">55</td>
-                <td class="btn btn-primary btn-lg">56</td>
-                <td class="btn btn-primary btn-lg">57</td>
-                <td class="btn btn-primary btn-lg">58</td>
-                <td class="btn btn-primary btn-lg">59</td>
-            </tr>
-            <tr>
-                <td class="btn btn-primary btn-lg">60</td>
-                <td class="btn btn-primary btn-lg">61</td>
-                <td class="btn btn-primary btn-lg">62</td>
-                <td class="btn btn-primary btn-lg">63</td>
-                <td class="btn btn-primary btn-lg">64</td>
-                <td class="btn btn-primary btn-lg">65</td>
-                <td class="btn btn-primary btn-lg">66</td>
-                <td class="btn btn-primary btn-lg">67</td>
-                <td class="btn btn-primary btn-lg">68</td>
-                <td class="btn btn-primary btn-lg">69</td>
-            </tr>
-            <tr>
-                <td class="btn btn-primary btn-lg">70</td>
-                <td class="btn btn-primary btn-lg">71</td>
-                <td class="btn btn-primary btn-lg">72</td>
-                <td class="btn btn-primary btn-lg">73</td>
-                <td class="btn btn-primary btn-lg">74</td>
-                <td class="btn btn-primary btn-lg">75</td>
-                <td class="btn btn-primary btn-lg">76</td>
-                <td class="btn btn-primary btn-lg">77</td>
-                <td class="btn btn-primary btn-lg">78</td>
-                <td class="btn btn-primary btn-lg">79</td>
-            </tr>
-            <tr>
-                <td class="btn btn-primary btn-lg">80</td>
-                <td class="btn btn-primary btn-lg">81</td>
-                <td class="btn btn-primary btn-lg">82</td>
-                <td class="btn btn-primary btn-lg">83</td>
-                <td class="btn btn-primary btn-lg">84</td>
-                <td class="btn btn-primary btn-lg">85</td>
-                <td class="btn btn-primary btn-lg">86</td>
-                <td class="btn btn-primary btn-lg">87</td>
-                <td class="btn btn-primary btn-lg">88</td>
-                <td class="btn btn-primary btn-lg">89</td>
-            </tr>
-            <tr>
-                <td class="btn btn-primary btn-lg">90</td>
-                <td class="btn btn-secondary btn-lg disabled"></td>
-                <td class="btn btn-secondary btn-lg disabled"></td>
-                <td class="btn btn-secondary btn-lg disabled"></td>
-                <td class="btn btn-secondary btn-lg disabled"></td>
-                <td class="btn btn-secondary btn-lg disabled"></td>
-                <td class="btn btn-secondary btn-lg disabled"></td>
-                <td class="btn btn-secondary btn-lg disabled"></td>
-                <td class="btn btn-secondary btn-lg disabled"></td>
-                <td class="btn btn-secondary btn-lg disabled"></td>
-            </tr>
-        </table>
-        <div class="hist">
-            <div class="lastPressed">0</div>
+    <form class="container mt-5" action="interface.html">
+
+        <h1>Infos</h1>
+        <h6>Raccourcis:</h6>
+        <ul>
+            <li>Plein écran : <kbd>F11</kbd></li>
+            <li>Remise à zéro : <kbd>Ctrl + R</kbd></li>
+        </ul>
+        <p>
+            Un menu caché apparaîtra lorsque pous placerez votre curseur dans le coin en haut à gauche de la fenêtre.
+        </p>
+        <h2>Configuration</h2>
+        <fieldset>
+            <div class="row mb-3">
+                <legend class="col-form-label col-sm-2 pt-0">Thème</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="theme" id="gridRadios1" value="dark"
+                            title="Foncé" checked>
+                        <label class="form-check-label" for="gridRadios1">
+                            Foncé
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="theme" id="gridRadios2" value="light"
+                            title="Clair">
+                        <label class="form-check-label" for="gridRadios2">
+                            Clair
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <div class="row mb-3">
+            <legend class="col-form-label col-sm-2 pt-0">Personnalisation</legend>
+            <div class="col-auto">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" name="animColors" id="animColors" value="true" onclick="enfrm(this)">
+                    <label class="form-check-label" for="animColors">Couleur de la bande d'annonce</label>
+                </div>
+                <div class="col-auto ml-5">
+                    <div class="form-color">
+                        <input type="color" class="form-color-input" name="animColor1" id="animColors1" value="#ffff00"
+                            disabled>
+                        <label class="form-color-label" for="animColors1">Couleur n°1 du dégradé</label>
+                    </div>
+                    <div class="form-color">
+                        <input type="color" class="form-color-input" name="animColor2" id="animColors2" value="#ffc400"
+                            disabled>
+                        <label class="form-color-label" for="animColors2">Couleur n°2 du dégradé</label>
+                    </div>
+                    <div class="col-auto">
+                        <div class="input-group">
+                            <input type="number" name="animDeg" id="animDeg" class="form-control" min="0" max="359"
+                                value="344" disabled>
+                            <div class="input-group-text">degrés</div>
+                        </div>
+                    </div>
+                    <div class="form-color mt-2">
+                        <input type="color" name="textColor" id="textColor" class="form-color-input" value="#ffffff" disabled>
+                        <label class="form-color-label" for="textColor">Couleur du texte de la bande d'annonce</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <legend class="col-form-label col-sm-2 pt-0">Animation</legend>
+            <div class="col-auto">
+                <div class="input-group">
+                    <input type="number" name="animTime" class="form-control" id="animTime"
+                        placeholder="Durée d'animation" min="2" value="7"
+                        title="Temps de l'animation d'affichage du dernier nombre sélectionné (min 2 secondes)">
+                    <div class="input-group-text">secondes</div>
+
+                </div>
+
+
+            </div>
 
         </div>
-        <div class="copyright">Copyright &#169; 2020 Maxence Raynal - Licensed under MIT <div>Icons made by <a
-                    href="https://www.flaticon.com/authors/kiranshastry" title="Kiranshastry">Kiranshastry</a> from <a
-                    href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-        </div>
-    </div>
-
+        <input class="btn btn-primary" type="submit" id="submit" value="Démarrer">
+    </form>
 </body>
-
 
 </html>

@@ -1,153 +1,252 @@
-body {
-    font-family: 'Rubik',
-        sans-serif;
-
-    font-family: 'Montserrat',
-        sans-serif;
-    background: #232526;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #414345, #232526);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #414345, #232526);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color: aliceblue;
-    table-layout: fixed;
-
+@font-face {
+  font-family: "HurmeGeometricSans4W00-Bold";
+  src: url("Hurme Geometric Sans 1 W03 Bold.ttf") format("truetype");
 }
 
-
-
-
-
-
-/* Force table to not be like tables anymore */
-table,
-thead,
-tbody,
-th,
-td,
-tr {
-    display: block;
+.container {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-family: 'HurmeGeometricSans4W00-Bold', 'Roboto', Arial, sans-serif;
+  grid: repeat(10, 1fr)/repeat(10, 1fr);
+  color: #fff;
+  background-color: black;
+  width: 100vw;
 }
 
-/* Hide table headers (but not display: none;, for accessibility) */
-thead tr {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
+.button {
+  width: 90%;
+  height: 80%;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  vertical-align: middle;
+  border-radius: 1vh;
+  font-size: 4vh;
 }
 
-tr {
-    border: 1px solid rgba(0, 0, 0, 0);
+.button:hover {
+  cursor: pointer;
 }
 
-td {
-    /* Behave  like a "row" */
-    border: none;
-    border-bottom: none;
-    position: relative;
-    padding-left: 49%;
+.button.toggled {
+  background-color: #fff;
+  color: #000;
 }
 
-td:before {
-    /* Now like a table header */
-    position: absolute;
-    /* Top/left values mimic padding */
-    top: 6px;
-    left: 6px;
-    width: 45%;
-    padding-right: 10px;
-    white-space: nowrap;
+.diagonal {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
-.checked {
-    background-color: #28a745;
+.diagonal:before {
+  content: "";
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 40vh;
+  height: 30vh;
+  background: linear-gradient(344deg, yellow 8%, #ffc400 100%);
+  -webkit-transform: skewY(-6deg);
+          transform: skewY(-6deg);
+  width: 100vw;
+  -webkit-animation: 1s ease 0s infinite alternate gameWonFront;
+          animation: 1s ease 0s infinite alternate gameWonFront;
+  -webkit-animation-play-state: inherit;
+          animation-play-state: inherit;
 }
 
-.checked:hover {
-    background-color: green;
+.diagonal .content {
+  overflow: hidden;
+  max-width: 50em;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 10rem;
+  padding-top: 40vh;
+  color: inherit;
+  -webkit-animation: 1s cubic-bezier(0.37, 0.35, 0.05, 0.91) 0s infinite alternate gameWonTextLong;
+          animation: 1s cubic-bezier(0.37, 0.35, 0.05, 0.91) 0s infinite alternate gameWonTextLong;
+  -webkit-animation-play-state: inherit;
+          animation-play-state: inherit;
 }
 
-
-.lastPressed {
-    font-size: 5vw;
-    background-color: rgba(0, 243, 32, 0.6);
-    padding: 10%;
-    border-radius: 20%;
+.diagonal .content.short {
+  font-size: 20vw;
+  padding-top: 28vh;
+  -webkit-animation: 1s cubic-bezier(0.37, 0.35, 0.05, 0.91) 0s infinite alternate gameWonText;
+          animation: 1s cubic-bezier(0.37, 0.35, 0.05, 0.91) 0s infinite alternate gameWonText;
 }
 
-.hist {
-    
-    z-index: 10;
-    text-align: center;
-    float: right;
-    position: fixed;
-    overflow: auto;
-    right: 0.5%;
-    top: 300px;
-    width: 10%;
-    height: 40%;
-
+.diagonal .content::first-letter {
+  text-transform: capitalize;
 }
 
-* {
-    scrollbar-color: #2a2c2e #232526;
-    -webkit-scrollbar-color: #2a2c2e #232526;
+.animations {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  -webkit-animation: 1s ease-in 0s infinite alternate gameWonBack;
+          animation: 1s ease-in 0s infinite alternate gameWonBack;
 }
 
-::-webkit-scrollbar-track {
-    background: #232526;
+@-webkit-keyframes gameWonFront {
+  0% {
+    height: 0vh;
+    top: 55vh;
+  }
+  70% {
+    height: 3vh;
+    top: 53vh;
+  }
+  100% {
+    height: 30vh;
+    top: 40vh;
+  }
 }
 
-::-webkit-scrollbar-thumb {
-    background: #2a2c2e;
+@keyframes gameWonFront {
+  0% {
+    height: 0vh;
+    top: 55vh;
+  }
+  70% {
+    height: 3vh;
+    top: 53vh;
+  }
+  100% {
+    height: 30vh;
+    top: 40vh;
+  }
 }
 
-.PrC {
-    align-self: center;
+@-webkit-keyframes gameWonBack {
+  0% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
 }
 
-.LP {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+@keyframes gameWonBack {
+  0% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
 }
 
-.copyright {
-    font-size: 1.2vw;
-    color: rgba(255, 255, 255, 0.8);
-    left: 5%;
+@-webkit-keyframes gameWonText {
+  0% {
+    padding-top: 40vh;
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    padding-top: 28vh;
+    opacity: 1;
+  }
 }
 
-td,
-tr,
-table {
-    display: block;
-    padding: 1% 1% 0.2% 1%;
-    table-layout: fixed;
+@keyframes gameWonText {
+  0% {
+    padding-top: 40vh;
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    padding-top: 28vh;
+    opacity: 1;
+  }
 }
 
-td {
-    width: 9%;
-    height: 9%;
-    font-size: 0.9vw;
+@-webkit-keyframes gameWonTextLong {
+  0% {
+    padding-top: 50vh;
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    padding-top: 40vh;
+    opacity: 1;
+  }
 }
 
-table {
-    width: 95%;
-    height: 82%;
-    padding-bottom: 0%;
+@keyframes gameWonTextLong {
+  0% {
+    padding-top: 50vh;
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    padding-top: 40vh;
+    opacity: 1;
+  }
 }
 
-.copyright a {
-    text-decoration: none;
-    color: inherit;
+.stop-anim {
+  -webkit-animation-play-state: paused !important;
+          animation-play-state: paused !important;
 }
 
-.controls button {
-    width: 1vw;
-    height: 1vw;
+.off {
+  display: none !important;
 }
 
-.controls button img {
-    width: 1vw;
-    height: 1vw;
+.center {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-family: 'HurmeGeometricSans4W00-Bold', 'Roboto', Arial, sans-serif;
+  font-size: 2.2rem;
 }
+
+.control {
+  z-index: 10000;
+  position: fixed;
+  opacity: 0.1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.control:hover {
+  opacity: 0.9;
+}
+
+.control button {
+  background-color: #222;
+  border: none;
+  color: #fff;
+}
+
+.light .container {
+  background-color: #fff;
+  color: #000;
+}
+
+.light .toggled {
+  background: #000;
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */
