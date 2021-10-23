@@ -1,62 +1,25 @@
 {
-  "name": "bod-lottery",
-  "version": "1.1.1",
-  "description": "Lottery app",
-  "main": "main.js",
-  "scripts": {
-    "electron": "electron .",
-    "start": "electron-forge start",
-    "package": "electron-forge package",
-    "make": "electron-forge make"
-  },
-  "author": {
-    "name": "Maxence Raynal",
-    "email": "mraynal2008@gmail.com"
-  },
-  "license": "MIT",
-  "devDependencies": {
-    "@electron-forge/cli": "^6.0.0-beta.53",
-    "@electron-forge/maker-deb": "^6.0.0-beta.52",
-    "@electron-forge/maker-rpm": "^6.0.0-beta.52",
-    "@electron-forge/maker-squirrel": "^6.0.0-beta.52",
-    "@electron-forge/maker-zip": "^6.0.0-beta.52",
-    "electron": "^9.4.0"
-  },
-  "dependencies": {
-    "electron-squirrel-startup": "^1.0.0"
-  },
-  "config": {
-    "forge": {
-      "packagerConfig": {},
-      "makers": [
-        {
-          "name": "@electron-forge/maker-squirrel",
-          "config": {
-            "name": "Bod-lottery",
-            "authors": "Maxence Raynal"
-          }
-        },
-        {
-          "name": "@electron-forge/maker-zip",
-          "platforms": [
-            "darwin",
-            "win32"
-          ]
-        },
-        {
-          "name": "@electron-forge/maker-deb",
-          "config": {}
-        },
-        {
-          "name": "@electron-forge/maker-rpm",
-          "config": {}
-        }
-      ],
-      "publishers": []
-    }
-  },
-  "build": {
-    "productName": "BodLottery",
-    "appId": "com.bodLottery"
-  }
+	"name": "bod-lottery",
+	"version": "2.0.0",
+	"scripts": {
+		"dev": "svelte-kit dev --host",
+		"build": "svelte-kit build",
+		"preview": "svelte-kit preview",
+		"lint": "prettier --ignore-path .gitignore  --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
+		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-node": "^1.0.0-next.55",
+		"@sveltejs/kit": "next",
+		"eslint": "^7.22.0",
+		"eslint-config-prettier": "^8.1.0",
+		"eslint-plugin-svelte3": "^3.2.0",
+		"prettier": "~2.2.1",
+		"prettier-plugin-svelte": "^2.2.0",
+		"sass": "^1.43.3",
+		"svelte": "^3.34.0",
+		"svelte-preprocess": "^4.7.4",
+		"svelte-preprocess-sass": "^2.0.1"
+	},
+	"type": "module"
 }
