@@ -1,3 +1,3 @@
 # Bod's Lottery
 This application is a bingo/lottery manager.
-It uses Bootstrap 5.0.0-alpha1 and Electron 10.1.1.
+It uses Bootstrap 5.1.0 and Electron 15.2.0.
