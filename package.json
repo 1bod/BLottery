@@ -13,7 +13,7 @@
 	"devDependencies": {
 		"@sveltejs/adapter-vercel": "next",
 		"@sveltejs/kit": "next",
-		"electron": "^15.5.5",
+		"electron": "latest",
 		"electron-builder": "^22.13.1",
 		"eslint": "^7.22.0",
 		"eslint-config-prettier": "^8.1.0",
